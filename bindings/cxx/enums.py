@@ -76,6 +76,7 @@ swig = open(os.path.join(outdirname, 'swig/enums.i'), 'w')
 for file in (header, code):
     print("/* Generated file - edit enums.py instead! */", file=file)
 
+print('%include "attribute.i"', file=swig)
 print("namespace sigrok {", file=header)
 
 # Template for beginning of class declaration and public members.
